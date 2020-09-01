@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middagstips</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@600&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="pictures/logoNoBackground.png" alt="Logotyp" id="logo">
+    <h1>Vad blir det till middag?</h1>
+    <p>Om du inte vet svaret på ovanstående fråga, tryck på knappen nedan för att generera ett slumpässigt förslag. Tryck igen om du inte gillar det förslag du fått!</p>
+    <button onclick="randomFood()" id="button">Klicka här!</button>
+    <h2 id="food"></h2>
+    <script>
+        var list = ["Köttbullar", "Pasta Carbonara", "Tortellini", "Hamburgare", "Pastasallad", "Schnitzel", "Lasagne", "Fish and chips", "Tunnbrödsrulle", "Korv med bröd", "Pizza", "Halloumiburgare", "Biff", "Jansons frestelse", "Wok", "Chili con carne", "Chili sin carne", "Kycklingspett"];
+
+        function randomFood() {
+            var foodItem = list[Math.floor(Math.random() * list.length)];
+            document.getElementById("food").innerHTML = foodItem;
+        }
+    </script>
+</body>
+</html>
